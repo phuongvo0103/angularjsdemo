@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo ng-repeat</title>
+		<meta charset="utf-8">
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+		<script src="js/handle-event.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body ng-app="handleEvent">
+		<div class="container">
+			<div ng-controller="ctrl">
+				<table border="1">
+					<thead>
+						<tr>
+							<td>Name</td>
+							<td>Likes</td>
+							<td>DisLikes</td>
+							<td>Minus</td>
+							<td colspan="2" align="center">Action</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="lang in language">
+							<td>{{lang.name}}</td>
+							<td>{{lang.like}}</td>
+							<td>{{lang.dislike}}</td>
+							<td>{{lang.minus}}</td>
+							<td><button ng-click="tangLike(lang)">Likes</button></td>
+							<td><button ng-click="tangDislike(lang)">Dislikes</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

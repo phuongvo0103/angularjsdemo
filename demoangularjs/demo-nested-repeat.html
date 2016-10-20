@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo nested-repeat</title>
+		<meta charset="utf-8">
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+		<script src="js/nested-repeat-demo.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body ng-app="nesteadrepeatDemo">
+		<div class="container">
+			<div ng-controller="ctrl">
+				<ul>
+					<li ng-repeat="coun in countries">
+						{{coun.name}} - Index{{$index}}
+						<ul>
+							<li ng-repeat="ci in coun.cities">{{ci.name}} - Index {{$index}} - Parent Index {{$parent.$index}}</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

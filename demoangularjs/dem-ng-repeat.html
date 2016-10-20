@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo ng-repeat</title>
+		<meta charset="utf-8">
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+		<script src="js/ng-repeat-demmo.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body ng-app="repeatDemo">
+		<div class="container">
+			<div ng-controller="ctrl">
+				<table border="1">
+					<thead>
+						<tr>
+							<td>First Name</td>
+							<td>Last Name</td>
+							<td>Gender</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="empo in employees">
+							<td>{{empo.firstName}}</td>
+							<td>{{empo.lastName}}</td>
+							<td>{{empo.gender}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo 1</title>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="js/app.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body ng-app="myApp">
+		<div class="container">
+			<div ng-controller="ctrl">
+				<p>FirstName :<input type="text" ng-model="employee.FirstName"/></p>
+				<p>LastName :<input type="text" ng-model="employee.LastName"/></p>
+				<p>Gender : <input type="text" ng-model="employee.Gender"/></p>
+				<br>
+				<h1>FirstName : {{employee.FirstName}}</h1>
+				<h1>LastName : {{employee.LastName}}</h1>
+				<h1>Gender : {{employee.Gender}}</h1>
+			</div>
+		</div>
+	</body>
+</html>
