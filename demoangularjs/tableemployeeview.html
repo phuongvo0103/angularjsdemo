@@ -1,0 +1,20 @@
+<table class="table" border="1">
+					<thead>
+						<tr style="background-color: #eee">
+							<td ng-click="sortData('name')">Name <div ng-class="getsortClass('name')"></div></td>
+							<td ng-click="sortData('brithday')">BrithDay <div ng-class="getsortClass('brithday')"></td>
+							<td ng-click="sortData('salary')">Salary <div ng-class="getsortClass('salary')"></td>
+							<td ng-click="sortData('gender')">Gender <div ng-class="getsortClass('gender')"></td>
+							<td>Status</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="emp in employees">
+							<td>{{emp.name | uppercase}}</td>
+							<td>{{emp.brithday | date:"dd/MM/yyyy"}}</td>
+							<td>{{emp.salary | currency:"VND"}}</td>
+							<td>{{emp.gender}}</td>
+							<td>{{emp.status|bolgstatus}}</td>
+						</tr>
+					</tbody>
+				</table>
